@@ -1,0 +1,59 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 20px;  
+}  
+
+.container {  
+    max-width: 800px;  
+    margin: auto;  
+}  
+
+h1 {  
+    text-align: center;  
+}  
+
+.form-group {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-bottom: 20px;  
+}  
+
+input, select {  
+    margin: 5px;  
+    padding: 10px;  
+    flex: 1; /* Để các ô có chiều rộng đều nhau */  
+    min-width: 150px; /* Đảm bảo các ô không quá nhỏ */  
+}  
+
+button {  
+    padding: 10px 15px;  
+    cursor: pointer;  
+    margin-left: 5px;  
+}  
+
+table {  
+    width: 100%;  
+    border-collapse: collapse;  
+}  
+
+th, td {  
+    border: 1px solid #ccc;  
+    padding: 8px;  
+    text-align: left;  
+}  
+
+th {  
+    background-color: #f4f4f4;  
+}  
+
+button {  
+    background-color: #007BFF;  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+}  
+
+button:hover {  
+    background-color: #0056b3;  
+}  

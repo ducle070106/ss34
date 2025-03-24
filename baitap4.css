@@ -1,0 +1,75 @@
+/* styles.css */  
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+    margin: 0;  
+    padding: 20px;  
+}  
+
+.container {  
+    max-width: 500px;  
+    margin: auto;  
+    background: white;  
+    padding: 20px;  
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);  
+    border-radius: 5px;  
+}  
+
+h1 {  
+    text-align: center;  
+}  
+
+input[type="text"] {  
+    width: calc(100% - 10px);  
+    padding: 10px;  
+    margin-bottom: 10px;  
+}  
+
+/* styles.css */  
+button {  
+    margin-top: 10px;  
+    padding: 5px 10px; /* Giảm kích thước padding */  
+    border: none;  
+    border-radius: 5px;  
+    color: white;  
+    cursor: pointer;  
+    font-weight: bold;  
+}  
+
+/* Thay đổi cho nút Thêm */  
+#add-btn {  
+    background-color: #28a745; /* Màu xanh cho nút Thêm */  
+    width: auto; /* Thay đổi width để nút nhỏ lại */  
+    margin-left: 0; /* Căn lề trái */  
+}  
+
+#add-btn:hover {  
+    background-color: #218838; /* Màu xanh đậm khi hover */  
+}  
+
+/* Giữ nguyên phần còn lại của CSS */  
+
+ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+li {  
+    display: flex;  
+    justify-content: space-between;  
+    padding: 10px;  
+    border-bottom: 1px solid #ccc;  
+}  
+
+.delete-btn {  
+    background-color: #dc3545; /* Màu đỏ cho nút Xóa */  
+    padding: 5px 10px;  
+    border: none;  
+    border-radius: 5px;  
+    color: white;  
+    cursor: pointer;  
+}  
+
+.delete-btn:hover {  
+    background-color: #c82333; /* Màu đỏ đậm khi hover */  
+}  

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./b3.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng nhập</h2>
+
+        <label for="email">Email:</label>
+        <input id="email" type="text" placeholder="Nhập email">
+        <p id="emailError" class="error"></p>
+
+        <label for="password">Mật khẩu:</label>
+        <input id="password" type="password" placeholder="Nhập mật khẩu">
+        <p id="passwordError" class="error"></p>
+
+        <button onclick="login()">Đăng nhập</button>
+        <p>Chưa có tài khoản? <a href="./b1_dangky.html">Đăng ký</a></p>
+    </div>
+
+
+    <script>
+        // Lấy danh sách người dùng từ Local Storage
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+function login() {
+    // Lấy giá trị nhập vào
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    // Reset lỗi trước khi kiểm tra
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+
+    // Kiểm tra email không được bỏ trống
+    if (email === "") {
+        document.getElementById("emailError").textContent = "Vui lòng nhập email!";
+        return;
+    }
+
+    // Kiểm tra mật khẩu không được bỏ trống
+    if (password === "") {
+        document.getElementById("passwordError").textContent = "Vui lòng nhập mật khẩu!";
+        return;
+    }
+
+    // Kiểm tra tài khoản có tồn tại không
+    let user = users.find(user => user.email === email && user.password === password);
+    
+    if (!user) {
+        document.getElementById("passwordError").textContent = "Email hoặc mật khẩu không đúng!";
+        return;
+    }
+
+    // Đăng nhập thành công -> Lưu trạng thái đăng nhập
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+    alert("Đăng nhập thành công!");
+    window.location.href = "home.html"; // Chuyển đến trang chủ
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Task Management</title>  
+    <link rel="stylesheet" href="./baitap2.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>Task Management</h1>  
+        <div class="form-group">  
+            <input type="text" id="content" placeholder="Content" required>  
+            <input type="date" id="dueDate" required>  
+            <select id="status" required>  
+                <option value="Pending">Pending</option>  
+                <option value="Completed">Completed</option>  
+            </select>  
+            <input type="text" id="assignedTo" placeholder="Username" required>  
+            <button id="addTaskBtn">Submit</button>  
+        </div>  
+        
+        <table>  
+            <thead>  
+                <tr>  
+                    <th>#</th>  
+                    <th>Content</th>  
+                    <th>Due Date</th>  
+                    <th>Status</th>  
+                    <th>Assigned To</th>  
+                    <th>Action</th>  
+                </tr>  
+            </thead>  
+            <tbody id="taskTable">   
+            </tbody>  
+        </table>  
+    </div>  
+    <script s

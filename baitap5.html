@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Danh sách nhân viên</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 20px;  
+        }  
+        h1 {  
+            text-align: center; /* Căn giữa tiêu đề */  
+        }  
+        table {  
+            width: 100%;  
+            border-collapse: collapse;  
+            margin-top: 20px;  
+            table-layout: fixed; /* Đảm bảo cột có chiều rộng cố định */  
+        }  
+        th, td {  
+            border: 1px solid #ddd;  
+            padding: 10px;  
+            text-align: center; /* Căn giữa nội dung */  
+            height: 50px; /* Đặt chiều cao cố định cho tất cả các hàng */  
+        }  
+        th {  
+            background-color: #f2f2f2;  
+        }  
+        .input-container {  
+            display: flex;  
+            justify-content: center; /* Căn giữa các phần tử bên trong */  
+            margin-bottom: 20px;  
+        }  
+        input {  
+            padding: 10px;  
+            margin-right: 10px;  
+        }  
+        button {  
+            padding: 10px 15px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>Danh sách nhân viên Rikkei</h1>  
+
+    <div class="input-container">  
+        <input type="text" id="name" placeholder="Tên nhân viên">  
+        <input type="text" id="position" placeholder="Chức vụ">  
+        <button onclick="addEmployee()">Thêm nhân viên</button>  
+    </div>  
+
+    <table>  
+        <thead>  
+            <tr>  
+                <th>STT</th>  
+                <th>Tên</th>  
+                <th>Chức vụ</th>  
+            </tr>  
+        </thead>  
+        <tbody id="employeeList">  
+            <!-- Danh sách nhân viên sẽ hiển thị ở đây -->  
+        </tbody>  
+    </table>  
+
+    <script src="./baitap5.js"></script>  
+</body>  
+</html>  
